@@ -15,6 +15,7 @@
         <td>{{ headers[4] }}</td>
         <td>{{ headers[5] }}</td>
         <td>{{ headers[6] }}</td>
+        <td>Actions</td>
     </tr>
     </thead>
     <tbody>
@@ -24,6 +25,7 @@
             <td>{{ story[headers[4]] }}</td>
             <td>{{ story[headers[5]] }}</td>
             <td>{{ story[headers[6]] }}</td>
+            <a href="{{ url_for("get_user_story", id=story[headers[0]]) }}">Show</a>
         </tr>
     {% endfor %}
     </tbody>
