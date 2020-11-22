@@ -16,3 +16,12 @@ def get_user_stories():
              "Acceptance Criteria": "works", "Business Value": 87, "Estimation": 10,
              "Status": "in-progress"}
             ]
+
+
+def get_user_story(id):
+    stories = get_user_stories()
+    for story in stories:
+        if story[HEADERS[0]] == int(id):
+            return story
+
+    return {}
